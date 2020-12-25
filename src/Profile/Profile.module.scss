@@ -1,0 +1,52 @@
+.profile {
+  @extend %flex-column;
+  @extend %card;
+}
+.description {
+  @extend %flex-column;
+  padding: 30px 0;
+}
+.avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+.name {
+  font-weight: 700;
+  font-size: 18px;
+  color: #505261;
+  margin-bottom: 10px;
+}
+.tag {
+  margin-bottom: 10px;
+}
+.stats {
+  @extend %flex-raw;
+  background: rgb(240, 244, 253);
+  list-style: none;
+  width: 100%;
+  border-radius: 0 0 4px 4px;
+  & > li {
+    @extend %flex-column;
+    width: calc(100% / 3);
+    border: 1px solid rgb(224, 228, 236);
+    border-bottom: none;
+    border-left: none;
+    font-size: 10px;
+    padding: 20px 0;
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+.label {
+  margin-bottom: 4px;
+}
+.quantity {
+  font-size: 14px;
+  font-weight: 900;
+  color: #505261;
+}

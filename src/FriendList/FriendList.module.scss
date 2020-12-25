@@ -1,0 +1,29 @@
+.friend-list {
+  & .item {
+    @extend %card;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 6px 12px;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  & .avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+  & .status {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: red;
+    &.online {
+      background: green;
+    }
+  }
+}

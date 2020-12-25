@@ -1,0 +1,24 @@
+.statistics {
+  @extend %card;
+}
+.title {
+  padding: 25px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+.stat-list {
+  @extend %flex-raw;
+  list-style: none;
+  width: 100%;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+  & .item {
+    @extend %flex-column;
+    color: white;
+    font-weight: 400;
+    padding: 8px 0;
+  }
+}
+.percentage {
+  font-size: 18px;
+}

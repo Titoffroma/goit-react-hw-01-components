@@ -1,0 +1,36 @@
+.transaction-history {
+  @extend %card;
+  overflow: hidden;
+  border-collapse: collapse;
+  table-layout: fixed;
+  & thead {
+    text-transform: uppercase;
+    color: white;
+    background: rgb(21, 144, 175);
+    & th {
+      padding: 10px;
+      &:not(:last-child) {
+        border-right: 1px solid white;
+      }
+    }
+  }
+  & td {
+    padding: 10px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 10px;
+    &:not(:last-child) {
+      border-right: 1px solid #e0e4ec;
+    }
+    &:nth-child(1) {
+      padding-left: 20px;
+      text-align: left;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+  & tr:nth-child(2n) {
+    background: #f0f4fd;
+  }
+}
