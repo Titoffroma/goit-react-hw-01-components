@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import imagePlaceholder from "../img/notImage.png";
+import styles from "./Profile.module.scss";
 
 const Bio = ({ avatar, name, tag, location }) => (
-  <div className="description">
-    <img src={avatar} alt="Аватар пользователя" className="avatar" />
-    <p className="name">{name}</p>
-    <p className="tag">@{tag}</p>
-    <p className="location">{location}</p>
+  <div className={styles.description}>
+    <img src={avatar} alt="Аватар пользователя" className={styles.avatar} />
+    <p className={styles.name}>{name}</p>
+    <p className={styles.tag}>@{tag}</p>
+    <p className={styles.location}>{location}</p>
   </div>
 );
 
@@ -22,24 +23,24 @@ Bio.defaultProps = {
 };
 
 const Stats = ({ stats }) => (
-  <ul className="stats">
+  <ul className={styles.stats}>
     <li>
-      <span className="label">Followers</span>
-      <span className="quantity">{stats.followers}</span>
+      <span className={styles.label}>Followers</span>
+      <span className={styles.quantity}>{stats.followers}</span>
     </li>
     <li>
-      <span className="label">Views</span>
-      <span className="quantity">{stats.views}</span>
+      <span className={styles.label}>Views</span>
+      <span className={styles.quantity}>{stats.views}</span>
     </li>
     <li>
-      <span className="label">Likes</span>
-      <span className="quantity">{stats.likes}</span>
+      <span className={styles.label}>Likes</span>
+      <span className={styles.quantity}>{stats.likes}</span>
     </li>
   </ul>
 );
 
 const Profile = ({ name, tag, location, avatar, stats }) => (
-  <div className="profile">
+  <div className={styles.profile}>
     <Bio name={name} tag={tag} location={location} avatar={avatar} />
     <Stats stats={stats} />
   </div>

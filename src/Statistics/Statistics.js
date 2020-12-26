@@ -1,20 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styles from "./Statistics.module.scss";
 
 const StatsItem = ({ fileType, percentage }) => (
-  <li className="item">
-    <span className="label">{fileType}</span>
-    <span className="percentage">{percentage}%</span>
+  <li className={styles.item}>
+    <span className={styles.label}>{fileType}</span>
+    <span className={styles.percentage}>{percentage}%</span>
   </li>
 );
 
 StatsItem.propTypes = {
   fileType: PropTypes.string.isRequired,
-  percentage: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
 };
 
 const Stats = ({ data }) => (
-  <ul className="stat-list">
+  <ul className={styles.statList}>
     {data.map((stat) => (
       <StatsItem
         key={stat.id}
@@ -26,8 +27,8 @@ const Stats = ({ data }) => (
 );
 
 const Statistics = ({ title, data }) => (
-  <section className="statistics">
-    <h2 className="title">{title}</h2>
+  <section className={styles.statistics}>
+    <h2 className={styles.title}>{title}</h2>
     <Stats data={data} />
   </section>
 );

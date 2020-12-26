@@ -1,11 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styles from "./FriendList.module.scss";
 
 const FriendListItem = ({ avatar, name, isOnline }) => (
-  <li className="item">
-    <span className={isOnline ? "status online" : "status"}></span>
-    <img className="avatar" src={avatar} alt={name} width="48" />
-    <p className="name">{name}</p>
+  <li className={styles.item}>
+    <span
+      className={isOnline ? styles.status + ` ${styles.online}` : styles.status}
+    ></span>
+    <img className={styles.avatar} src={avatar} alt={name} width="48" />
+    <p className={styles.name}>{name}</p>
   </li>
 );
 FriendListItem.propTypes = {
@@ -18,9 +21,9 @@ FriendListItem.defaultProps = {
 };
 
 const FriendList = ({ friends }) => (
-  <ul className="friend-list">
-    {friends.map((friend, index) => (
-      <FriendListItem key={index} {...friend} />
+  <ul className={styles.friendList}>
+    {friends.map((friend) => (
+      <FriendListItem key={friend.id} {...friend} />
     ))}
   </ul>
 );

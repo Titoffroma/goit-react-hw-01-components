@@ -1,4 +1,16 @@
-.friend-list {
+%card {
+  width: 260px;
+  margin: 0 auto;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #9a9dac;
+}
+
+.friendList {
   & .item {
     @extend %card;
     display: flex;
@@ -13,8 +25,9 @@
     width: 70px;
     height: 70px;
     border-radius: 10px;
-    margin-bottom: 0;
     margin-right: 10px;
+    object-fit: cover;
+    border: 1px solid #ccc;
   }
   & .status {
     margin-right: 10px;
