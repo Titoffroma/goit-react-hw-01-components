@@ -9,6 +9,7 @@ const Transaction = ({ type, amount, currency }) => (
     <td>{currency}</td>
   </tr>
 );
+
 Transaction.propTypes = {
   type: PropTypes.string.isRequired,
   amount: PropTypes.string.isRequired,

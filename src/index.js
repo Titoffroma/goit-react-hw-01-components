@@ -13,7 +13,7 @@ ReactDOM.render(
 
 const statItems = document.querySelectorAll("li[class^=Statistics_item]");
 
-statItems.forEach((item, index, arr) => {
+statItems.forEach((item) => {
   item.style.background = randomizeBgColor();
-  item.style.width = `calc(100% / ${arr.length})`;
+  item.style.width = `calc(100% / ${statItems.length})`;
 });

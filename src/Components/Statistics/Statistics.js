@@ -15,7 +15,7 @@ StatsItem.propTypes = {
 };
 
 const Stats = ({ data }) => (
-  <ul className={styles.statList}>
+  <ul className={styles["stat-list"]}>
     {data.map((stat) => (
       <StatsItem
         key={stat.id}
@@ -37,7 +37,9 @@ Statistics.propTypes = {
   title: PropTypes.string,
   data: PropTypes.array.isRequired,
 };
+
 Statistics.defaultProps = {
   title: "",
 };
+
 export default Statistics;

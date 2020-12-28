@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import imagePlaceholder from "../img/notImage.png";
+import imagePlaceholder from "../../img/notImage.png";
 import styles from "./Profile.module.scss";
 
 const Bio = ({ avatar, name, tag, location }) => (
@@ -18,6 +18,7 @@ Bio.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
 };
+
 Bio.defaultProps = {
   avatar: imagePlaceholder,
 };
@@ -38,6 +39,10 @@ const Stats = ({ stats }) => (
     </li>
   </ul>
 );
+
+Stats.propTypes = {
+  stats: PropTypes.object.isRequired,
+};
 
 const Profile = ({ name, tag, location, avatar, stats }) => (
   <div className={styles.profile}>
